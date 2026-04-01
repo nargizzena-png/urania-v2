@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Urania Studio - Hub Cultural & Studio de Producție în Cluj-Napoca. Locații pentru evenimente, repetiții, podcast-uri și producții creative.'; ?>">
+    <meta name="keywords" content="studio producție Cluj, hub cultural, spații evenimente, repetiții, podcast, închiriere sală">
+    <meta name="author" content="Urania Studio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="<?php echo htmlspecialchars('https://' . ($_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro') . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)); ?>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | Urania Studio' : 'Urania Studio'; ?>">
+    <meta property="og:description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Urania Studio - Hub Cultural & Studio de Producție în Cluj-Napoca.'; ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo htmlspecialchars('https://' . ($_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro') . $_SERVER['REQUEST_URI']); ?>">
+    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro'; ?>/images/hero.jpg">
+    <meta property="og:locale" content="ro_RO">
+    <meta property="og:site_name" content="Urania Studio">
+    
+    <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | Urania Studio' : 'Urania Studio'; ?></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <?php if (isset($preload_image)): ?>
+    <link rel="preload" as="image" href="<?php echo htmlspecialchars($preload_image); ?>" type="image/webp">
+    <?php endif; ?>
+</head>
+<body>
+
+<?php $current_page = basename($_SERVER['PHP_SELF']); ?>
+<header class="header-main">
+    <div class="header-container">
+        <div class="logo"><a href="index.php">URANIA</a></div>
+
+        <button class="burger-icon" id="open-menu" aria-label="Deschide meniu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="header-right">
+            <nav class="nav-wrap" id="site-nav" aria-label="Navigare principală">
+                <ul class="nav-list">
+                    <li><a href="spatii.php" class="<?php echo ($current_page === 'spatii.php') ? 'active' : ''; ?>">Spații</a></li>
+                    <li><a href="servicii.php" class="<?php echo ($current_page === 'servicii.php') ? 'active' : ''; ?>">Servicii</a></li>
+                    <li><a href="jurnal.php" class="<?php echo ($current_page === 'jurnal.php') ? 'active' : ''; ?>">Jurnal</a></li>
+                    <li><a href="contact.php" class="<?php echo ($current_page === 'contact.php') ? 'active' : ''; ?>">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
