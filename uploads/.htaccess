@@ -1,0 +1,5 @@
+# Fără execuție de scripturi în folderul de încărcări
+<FilesMatch "\.(php|phtml|phar|pl|py|cgi|sh)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes

@@ -14,7 +14,7 @@
     <meta property="og:description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Urania Studio - Hub Cultural & Studio de Producție în Cluj-Napoca.'; ?>">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?php echo htmlspecialchars('https://' . ($_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro') . $_SERVER['REQUEST_URI']); ?>">
-    <meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro'; ?>/images/hero.jpg">
+    <meta property="og:image" content="https://<?php echo htmlspecialchars($_SERVER['HTTP_HOST'] ?? 'uraniastudio.eu'); ?>/<?php echo htmlspecialchars($og_image ?? 'images/og-urania.jpg'); ?>">
     <meta property="og:locale" content="ro_RO">
     <meta property="og:site_name" content="Urania Studio">
     
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo filemtime(__DIR__ . '/../css/style.css'); ?>">
     <?php if (isset($preload_image)): ?>
     <link rel="preload" as="image" href="<?php echo htmlspecialchars($preload_image); ?>" type="image/webp">
     <?php endif; ?>
@@ -43,7 +43,7 @@
             <nav class="nav-wrap" id="site-nav" aria-label="Navigare principală">
                 <ul class="nav-list">
                     <li><a href="spatii.php" class="<?php echo ($current_page === 'spatii.php') ? 'active' : ''; ?>">Spații</a></li>
-                    <li><a href="servicii.php" class="<?php echo ($current_page === 'servicii.php') ? 'active' : ''; ?>">Servicii</a></li>
+                    <li><a href="preturi.php" class="<?php echo ($current_page === 'preturi.php') ? 'active' : ''; ?>">Prețuri</a></li>
                     <li><a href="jurnal.php" class="<?php echo ($current_page === 'jurnal.php') ? 'active' : ''; ?>">Jurnal</a></li>
                     <li><a href="contact.php" class="<?php echo ($current_page === 'contact.php') ? 'active' : ''; ?>">Contact</a></li>
                 </ul>

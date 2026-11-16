@@ -47,6 +47,18 @@ $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
 $subject_type = isset($_POST['subject']) ? trim($_POST['subject']) : '';
 $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 $consent = isset($_POST['consent']) ? true : false;
+$marketing = !empty($_POST['marketing']);
+$event_date = isset($_POST['event_date']) ? trim($_POST['event_date']) : '';
+$guests = isset($_POST['guests']) ? trim($_POST['guests']) : '';
+$source = (isset($_POST['source']) && $_POST['source'] === 'preturi') ? 'Pagina Prețuri' : 'Pagina Contact';
+if ($event_date !== '') {
+    // format românesc zz.ll.aaaa
+    if (!preg_match('/^(\d{2})\.(\d{2})\.(\d{4})$/', $event_date, $dm) || !checkdate((int)$dm[2], (int)$dm[1], (int)$dm[3])) {
+        $errors_date = 'Data dorită nu este validă (format zz.ll.aaaa).';
+        $event_date = '';
+    }
+}
+if ($guests !== '' && !ctype_digit($guests)) { $guests = ''; }
 
 // Validation
 $errors = [];
@@ -83,6 +95,10 @@ if (empty($message)) {
     $errors[] = 'Mesajul trebuie să conțină cel puțin două cuvinte.';
 } elseif (strlen($message) > 5000) {
     $errors[] = 'Mesajul este prea lung (maxim 5000 caractere).';
+}
+
+if (!empty($errors_date)) {
+    $errors[] = $errors_date;
 }
 
 if (!$consent) {
@@ -138,7 +154,10 @@ if (!empty($errors)) {
 $subjects = [
     'eveniment' => 'Organizare eveniment',
     'repetitii' => 'Închiriere sală repetiții',
-    'podcast' => 'Închiriere studio podcast',
+    'podcast' => 'Podcast, foto sau video',
+    'conferinta' => 'Conferință sau workshop',
+    'spectacol' => 'Spectacol sau concert',
+    'expozitie' => 'Expoziție',
     'productie' => 'Producție foto/video',
     'colaborare' => 'Propunere de colaborare',
     'altele' => 'Altele'
@@ -158,6 +177,10 @@ if (!empty($phone)) {
     $email_body .= "TELEFON: " . htmlspecialchars($phone, ENT_QUOTES, 'UTF-8') . "\n";
 }
 $email_body .= "SUBIECT: " . htmlspecialchars($subjects[$subject_type] ?? $subject_type, ENT_QUOTES, 'UTF-8') . "\n";
+if ($event_date !== '') { $email_body .= "DATA DORITĂ: " . $event_date . "\n"; }
+if ($guests !== '') { $email_body .= "PARTICIPANȚI: " . $guests . "\n"; }
+$email_body .= "SURSA: " . $source . "\n";
+$email_body .= "ACORD MARKETING: " . ($marketing ? "DA (bifat de utilizator la " . date('Y-m-d H:i') . ")" : "NU") . "\n";
 $email_body .= "\nMESAJ:\n";
 $email_body .= str_repeat("-", 50) . "\n";
 $email_body .= htmlspecialchars($message, ENT_QUOTES, 'UTF-8') . "\n";

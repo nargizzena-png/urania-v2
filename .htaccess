@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# 301: pagina Servicii a fost înlocuită de Prețuri
+RewriteRule ^servicii\.php$ /preturi.php [L,R=301]
+
+# Documente interne (plan, întrebări) — nu sunt publice
+<FilesMatch "\.(md|sqlite|zip)$">
+    Require all denied
+</FilesMatch>

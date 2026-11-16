@@ -1,6 +1,6 @@
 <?php 
 $page_title = 'Contact'; 
-$page_desc = 'Contactează Urania Studio la 0739 333 357 sau pe WhatsApp. Strada Horea, nr. 4, Cluj-Napoca. Scrie-ne pentru evenimente, repetiții, podcast-uri și producții creative.'; 
+$page_desc = 'Contactează Urania Studio la +40 756 861 229 sau pe WhatsApp. Strada Horea, nr. 4, Cluj-Napoca. Scrie-ne pentru evenimente, repetiții, podcast-uri și producții creative.'; 
 include 'includes/header.php'; 
 ?>
 
@@ -11,7 +11,7 @@ include 'includes/header.php';
   "name": "Urania Studio",
   "description": "Hub Cultural & Studio de Producție în Cluj-Napoca",
   "url": "https://<?php echo $_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro'; ?>",
-  "telephone": "+40739333357",
+  "telephone": "+40756861229",
   "email": "uraniastudio.eu@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -51,7 +51,7 @@ include 'includes/header.php';
                             <i class="fas fa-phone-alt contact-icon" aria-hidden="true"></i>
                             <div class="contact-item-content">
                                 <strong>Telefon:</strong>
-                                <a href="tel:+40739333357" aria-label="Apelează 0739 333 357">0739 333 357</a>
+                                <a href="tel:+40756861229" aria-label="Apelează +40 756 861 229">+40 756 861 229</a>
                             </div>
                         </div>
 
@@ -65,10 +65,10 @@ include 'includes/header.php';
                     </div>
 
                     <div class="contact-actions">
-                        <a href="tel:+40739333357" class="btn-gold contact-action-btn">
+                        <a href="tel:+40756861229" class="btn-gold contact-action-btn">
                             <i class="fas fa-phone-alt"></i><span>Sună Acum</span>
                         </a>
-                        <a href="https://wa.me/40739333357" target="_blank" rel="noopener noreferrer" class="btn-gold btn-gold-fill contact-action-btn">
+                        <a href="https://wa.me/40756861229" target="_blank" rel="noopener noreferrer" class="btn-gold btn-gold-fill contact-action-btn">
                             <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
                         </a>
                         <a href="mailto:uraniastudio.eu@gmail.com" class="btn-gold contact-action-btn">
@@ -130,10 +130,38 @@ include 'includes/header.php';
                         </div>
 
                         <div class="form-group form-consent">
+
+
                             <label class="checkbox-label">
+
+
                                 <input type="checkbox" name="consent" required aria-required="true">
-                                <span>Sunt de acord cu prelucrarea datelor personale conform <a href="privacy.php" target="_blank">Politicii de Confidențialitate</a> <span class="required">*</span></span>
+
+
+                                <span>Am citit <a href="privacy.php" target="_blank">Politica de confidențialitate</a> și sunt de acord cu prelucrarea datelor pentru a primi un răspuns la cererea mea. <span class="required">*</span></span>
+
+
                             </label>
+
+
+                        </div>
+
+
+                        <div class="form-group form-consent form-consent-optional">
+
+
+                            <label class="checkbox-label">
+
+
+                                <input type="checkbox" name="marketing" value="1">
+
+
+                                <span>Vreau să primesc noutăți despre evenimente și oferte Urania Studio pe email (opțional). Mă pot dezabona oricând.</span>
+
+
+                            </label>
+
+
                         </div>
                         
                         <button type="submit" class="btn-gold btn-gold-fill form-submit">
@@ -159,17 +187,20 @@ include 'includes/header.php';
         <div class="map-container reveal">
             <h2 class="map-title">Găsește-ne</h2>
             <div class="map-wrapper">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21858.56324886526!2d23.5708!3d46.7684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c2a5a6b4b5f%3A0x123456789abcdef!2sStrada%20Horea%204%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro"
-                    width="100%" 
-                    height="400" 
-                    style="border:0; filter: grayscale(100%) invert(92%) contrast(83%);" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Locația Urania Studio pe hartă"
-                    aria-label="Hartă Google Maps cu locația Urania Studio - Strada Horea, nr. 4, Cluj-Napoca">
-                </iframe>
+                <div class="map-consent" id="mapConsent" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21858.56324886526!2d23.5708!3d46.7684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490c2a5a6b4b5f%3A0x123456789abcdef!2sStrada%20Horea%204%2C%20Cluj-Napoca!5e0!3m2!1sro!2sro!4v1234567890123!5m2!1sro!2sro">
+                    <p>Harta este furnizată de Google Maps, care poate seta cookie-uri.</p>
+                    <button type="button" class="btn-gold" id="mapLoad"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Afișează harta</button>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Strada+Horea+4+Cluj-Napoca" target="_blank" rel="noopener noreferrer" class="card-link">sau deschide în Google Maps &rarr;</a>
+                </div>
+                <script>
+                document.getElementById('mapLoad').addEventListener('click', function () {
+                    var box = document.getElementById('mapConsent'), f = document.createElement('iframe');
+                    f.src = box.dataset.src; f.width = '100%'; f.height = '400'; f.loading = 'lazy'; f.allowFullscreen = true;
+                    f.referrerPolicy = 'no-referrer-when-downgrade'; f.title = 'Locația Urania Studio pe hartă';
+                    f.style.cssText = 'border:0; filter: grayscale(100%) invert(92%) contrast(83%);';
+                    box.replaceWith(f);
+                });
+                </script>
             </div>
         </div>
     </div>
