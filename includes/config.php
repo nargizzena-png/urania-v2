@@ -7,6 +7,13 @@
 // Cât timp este gol, site-ul nu încarcă Google Analytics și nu afișează bannerul de cookies.
 const GA_MEASUREMENT_ID = '';
 
+// Adresa principală a site-ului (fără „/” la final) — folosită în canonical, og:url și sitemap.xml.
+const SITE_URL = 'https://uraniastudio.eu';
+
+// Codul de verificare Google Search Console (doar valoarea „content” din meta-tag).
+// Necesar doar la metoda „URL prefix → HTML tag”. Gol = tag-ul nu se afișează.
+const GSC_VERIFICATION = '';
+
 // Date firmă (folosite în subsol și în paginile legale)
 const COMPANY_NAME    = 'PIXEL STUDIOS TRANSILVANIA SRL';
 const COMPANY_CUI     = '41218534';

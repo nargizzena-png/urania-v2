@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /data/
+Disallow: /includes/
+Disallow: /contact-submit.php
+
+Sitemap: https://uraniastudio.eu/sitemap.xml

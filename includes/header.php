@@ -7,14 +7,25 @@
     <meta name="keywords" content="studio producție Cluj, hub cultural, spații evenimente, repetiții, podcast, închiriere sală">
     <meta name="author" content="Urania Studio">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="<?php echo htmlspecialchars('https://' . ($_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro') . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)); ?>">
-    
+<?php
+    require_once __DIR__ . '/config.php';
+    $canon_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($canon_path === '/index.php') $canon_path = '/';
+    // Pentru pagina de eveniment păstrăm parametrul ?e=slug (fiecare eveniment e o pagină separată)
+    if (basename($canon_path) === 'eveniment.php' && isset($_GET['e'])) $canon_path .= '?e=' . rawurlencode((string)$_GET['e']);
+    $canon_url = SITE_URL . $canon_path;
+?>
+    <link rel="canonical" href="<?php echo htmlspecialchars($canon_url); ?>">
+<?php if (GSC_VERIFICATION !== ''): ?>
+    <meta name="google-site-verification" content="<?php echo htmlspecialchars(GSC_VERIFICATION); ?>">
+<?php endif; ?>
+
     <!-- Open Graph -->
     <meta property="og:title" content="<?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | Urania Studio' : 'Urania Studio'; ?>">
     <meta property="og:description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Urania Studio - Hub Cultural & Studio de Producție în Cluj-Napoca.'; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo htmlspecialchars('https://' . ($_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro') . $_SERVER['REQUEST_URI']); ?>">
-    <meta property="og:image" content="https://<?php echo htmlspecialchars($_SERVER['HTTP_HOST'] ?? 'uraniastudio.eu'); ?>/<?php echo htmlspecialchars($og_image ?? 'images/og-urania.jpg'); ?>">
+    <meta property="og:url" content="<?php echo htmlspecialchars($canon_url); ?>">
+    <meta property="og:image" content="<?php echo htmlspecialchars(SITE_URL); ?>/<?php echo htmlspecialchars($og_image ?? 'images/og-urania.jpg'); ?>">
     <meta property="og:locale" content="ro_RO">
     <meta property="og:site_name" content="Urania Studio">
     
