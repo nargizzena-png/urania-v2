@@ -5,7 +5,7 @@
 
 // ID-ul Google Analytics 4 (format „G-XXXXXXXXXX”).
 // Cât timp este gol, site-ul nu încarcă Google Analytics și nu afișează bannerul de cookies.
-const GA_MEASUREMENT_ID = '';
+const GA_MEASUREMENT_ID = 'G-JV2ED8M1TW';
 
 // Adresa principală a site-ului (fără „/” la final) — folosită în canonical, og:url și sitemap.xml.
 const SITE_URL = 'https://uraniastudio.eu';
