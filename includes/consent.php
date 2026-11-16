@@ -32,7 +32,15 @@ if (GA_MEASUREMENT_ID === '') return;
         window.gtag = function () { dataLayer.push(arguments); };
         gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'granted' });
         gtag('js', new Date());
-        gtag('config', GA_ID);
+        // Trafic intern: ?intern=1 marchează acest browser (laptop, birou), ?intern=0 anulează.
+        // În GA4 filtrul „Internal Traffic” exclude evenimentele cu traffic_type = internal.
+        var internal = false;
+        try {
+            var m = location.search.match(/[?&]intern=([01])/);
+            if (m) { m[1] === '1' ? localStorage.setItem('urania_internal', '1') : localStorage.removeItem('urania_internal'); }
+            internal = localStorage.getItem('urania_internal') === '1';
+        } catch (e) {}
+        gtag('config', GA_ID, internal ? { traffic_type: 'internal' } : {});
         var s = document.createElement('script'); s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
         document.head.appendChild(s);
