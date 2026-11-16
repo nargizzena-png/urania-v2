@@ -1915,7 +1915,27 @@ input[type="date"] { color-scheme: dark; }
 .pr-valid { text-align: center; }
 
 /* Home: calendar + arhivă */
-.home-cal { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+.home-cal { display: grid; grid-template-columns: 1.7fr 1fr; gap: 60px; align-items: start; }
+.home-cal--quiet { grid-template-columns: 1fr 1.3fr; }
+
+/* Următorul eveniment — card mare */
+.hf { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); gap: 36px; align-items: center; padding-bottom: 32px; }
+.hf-poster { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #0a0a0a; border: 1px solid rgba(212,175,55,.2); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); }
+.hf-poster img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.hf:hover .hf-poster img { transform: scale(1.03); }
+.hf-info { display: flex; flex-direction: column; gap: 14px; }
+.hf-date { display: flex; align-items: center; gap: 14px; margin: 0; color: var(--champagne); font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; line-height: 1.5; }
+.hf-date strong { font-family: var(--font-heading); font-weight: 400; font-size: 3.4rem; line-height: 1; letter-spacing: 0; color: var(--gold); }
+.hf-info .card-sub { margin: 0; }
+.hf-title { margin: 0; font-family: var(--font-heading); font-weight: 400; font-size: 2rem; line-height: 1.15; }
+.hf-title a { color: #f0e6c8; transition: color .3s; }
+.hf-title a:hover { color: var(--gold); }
+.hf-excerpt { margin: 0; color: var(--champagne); line-height: 1.65; font-size: .95rem; }
+.hf-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.hf + .home-events { margin-top: 8px; }
+
+/* Arhiva — mai mică, pe planul doi */
+.home-archive-more { display: inline-block; margin-top: 18px; }
 .home-cal .ev-block-title { margin-bottom: 18px; font-size: .68rem; }
 .home-cal-empty { padding: 28px 0; border-top: 1px solid rgba(212,175,55,.15); border-bottom: 1px solid rgba(212,175,55,.15); }
 .home-cal-empty p { color: var(--champagne); margin-bottom: 14px; line-height: 1.6; }
@@ -1926,8 +1946,19 @@ input[type="date"] { color-scheme: dark; }
 .ha-item:hover img { transform: scale(1.05); }
 .ha-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 12px 12px; background: linear-gradient(transparent, rgba(8,8,8,.92)); color: var(--ivory); font-family: var(--font-heading); font-size: .92rem; line-height: 1.3; }
 .ha-cap small { display: block; font-family: var(--font-body); color: var(--gold); font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 4px; }
-@media (max-width: 900px) { .home-cal { grid-template-columns: 1fr; gap: 40px; } }
-@media (max-width: 480px) { .home-archive { grid-template-columns: 1fr 1fr; } .home-archive .ha-item:nth-child(3) { display: none; } }
+.home-cal:not(.home-cal--quiet) .home-archive { gap: 10px; }
+.home-cal:not(.home-cal--quiet) .ha-cap { font-size: .78rem; padding: 28px 8px 8px; }
+.home-cal:not(.home-cal--quiet) .ha-cap small { font-size: .56rem; letter-spacing: .15em; }
+@media (max-width: 900px) {
+    .home-cal, .home-cal--quiet { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 640px) {
+    .hf { grid-template-columns: 1fr; gap: 22px; }
+    .hf-poster { max-width: 360px; }
+    .hf-title { font-size: 1.6rem; }
+    .hf-date strong { font-size: 2.8rem; }
+}
+@media (max-width: 480px) { .home-cal--quiet .home-archive { grid-template-columns: 1fr 1fr; } .home-cal--quiet .home-archive .ha-item:nth-child(3) { display: none; } }
 .form-consent-optional { margin-top: 4px; } .form-consent-optional span { color: var(--muted-warm); }
 
 /* Fișa tehnică: denumirea întâi (mare), cifra dedesubt (mică) */

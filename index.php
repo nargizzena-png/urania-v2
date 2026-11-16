@@ -110,12 +110,28 @@ include 'includes/header.php';
             </div>
             <a href="jurnal.php" class="card-link">Tot calendarul &rarr;</a>
         </div>
-        <div class="home-cal">
+        <div class="home-cal<?= $upcoming ? '' : ' home-cal--quiet' ?>">
             <div class="home-cal-col">
                 <h3 class="ev-block-title"><span>Urmează</span></h3>
-                <?php if ($upcoming): ?>
+                <?php if ($upcoming): $f = $upcoming[0]; $fUrl = 'eveniment.php?e=' . rawurlencode($f['slug']); $ft = strtotime($f['starts_at']); ?>
+                <article class="hf reveal">
+                    <a href="<?= e($fUrl) ?>" class="hf-poster" tabindex="-1" aria-hidden="true">
+                        <?php if ($f['cover']): ?><img src="<?= e(photo_url($f['cover'])) ?>" alt="" loading="lazy" decoding="async"><?php endif; ?>
+                    </a>
+                    <div class="hf-info">
+                        <p class="hf-date"><strong><?= e(event_day_label($f)) ?></strong><span><?= ro_month((int)date('n', $ft)) ?><br><?= e(date('H:i', $ft)) ?></span></p>
+                        <span class="card-sub"><?= e(implode(' · ', array_filter([$f['category'], $f['venue']]))) ?></span>
+                        <h4 class="hf-title"><a href="<?= e($fUrl) ?>"><?= e($f['title']) ?></a></h4>
+                        <?php if ($f['excerpt']): ?><p class="hf-excerpt"><?= e($f['excerpt']) ?></p><?php endif; ?>
+                        <div class="hf-actions">
+                            <a href="<?= e($fUrl) ?>" class="btn-gold<?= $f['ticket_url'] ? '' : ' btn-gold-fill' ?>">Detalii</a>
+                            <?php if ($f['ticket_url']): ?><a href="<?= e($f['ticket_url']) ?>" class="btn-gold btn-gold-fill" target="_blank" rel="noopener noreferrer"><?= e(ticket_label($f['ticket_url'])) ?></a><?php endif; ?>
+                        </div>
+                    </div>
+                </article>
+                <?php if (count($upcoming) > 1): ?>
                 <div class="home-events">
-                    <?php foreach ($upcoming as $i => $ev): $t = strtotime($ev['starts_at']); ?>
+                    <?php foreach (array_slice($upcoming, 1) as $i => $ev): $t = strtotime($ev['starts_at']); ?>
                     <a href="eveniment.php?e=<?= e(rawurlencode($ev['slug'])) ?>" class="he-item reveal<?= $i ? ' reveal-delay-' . $i : '' ?>">
                         <span class="he-date"><strong><?= e(event_day_label($ev)) ?></strong><?= ro_month((int)date('n', $t), true) ?></span>
                         <?php if ($ev['cover']): ?><span class="he-thumb"><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="" loading="lazy" decoding="async"></span><?php endif; ?>
@@ -127,6 +143,7 @@ include 'includes/header.php';
                     </a>
                     <?php endforeach; ?>
                 </div>
+                <?php endif; ?>
                 <?php else: ?>
                 <div class="home-cal-empty reveal">
                     <p>Programul următoarelor evenimente va fi anunțat în curând.</p>
@@ -139,12 +156,13 @@ include 'includes/header.php';
                 <h3 class="ev-block-title"><span>Din arhivă</span></h3>
                 <div class="home-archive">
                     <?php foreach ($recent as $i => $ev): ?>
-                    <a href="eveniment.php?e=<?= e(rawurlencode($ev['slug'])) ?>" class="ha-item reveal<?= $i ? ' reveal-delay-' . $i : '' ?>">
+                    <a href="eveniment.php?e=<?= e(rawurlencode($ev['slug'])) ?>" class="ha-item reveal<?= $i ? ' reveal-delay-' . min($i, 3) : '' ?>">
                         <?php if ($ev['cover']): ?><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="" loading="lazy" decoding="async"><?php endif; ?>
                         <span class="ha-cap"><small><?= e(event_day_label($ev) . ' ' . ro_month((int)date('n', strtotime($ev['starts_at'])), true)) ?></small><?= e($ev['title']) ?></span>
                     </a>
                     <?php endforeach; ?>
                 </div>
+                <a href="jurnal.php#arhiva" class="card-link home-archive-more">Toată arhiva &rarr;</a>
             </div>
             <?php endif; ?>
         </div>
