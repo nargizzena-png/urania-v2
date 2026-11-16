@@ -8,7 +8,11 @@ if (GA_MEASUREMENT_ID === '') return;
 ?>
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Setări cookies" hidden>
     <div class="cookie-inner">
-        <p><strong>Cookie-uri</strong> Folosim cookie-uri de analiză (Google Analytics) ca să vedem ce pagini sunt utile. Le activăm doar cu acordul tău. <a href="cookies.php">Detalii</a></p>
+        <i class="fa-solid fa-cookie-bite cookie-icon" aria-hidden="true"></i>
+        <div class="cookie-text">
+            <p class="cookie-title">Acceptați cookie-urile?</p>
+            <p>Folosim cookie-uri de analiză (Google Analytics) ca să vedem ce pagini sunt utile. Le activăm doar cu acordul tău. <a href="cookies.php">Detalii</a></p>
+        </div>
         <div class="cookie-actions">
             <button type="button" class="btn-gold btn-sm" data-consent="deny">Refuz</button>
             <button type="button" class="btn-gold btn-gold-fill btn-sm" data-consent="accept">Accept</button>
