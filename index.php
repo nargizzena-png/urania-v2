@@ -118,6 +118,7 @@ include 'includes/header.php';
                     <?php foreach ($upcoming as $i => $ev): $t = strtotime($ev['starts_at']); ?>
                     <a href="eveniment.php?e=<?= e(rawurlencode($ev['slug'])) ?>" class="he-item reveal<?= $i ? ' reveal-delay-' . $i : '' ?>">
                         <span class="he-date"><strong><?= e(event_day_label($ev)) ?></strong><?= ro_month((int)date('n', $t), true) ?></span>
+                        <?php if ($ev['cover']): ?><span class="he-thumb"><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="" loading="lazy" decoding="async"></span><?php endif; ?>
                         <span class="he-info">
                             <span class="card-sub"><?= e(implode(' · ', array_filter([$ev['category'], $ev['venue']]))) ?></span>
                             <span class="he-title"><?= e($ev['title']) ?></span>

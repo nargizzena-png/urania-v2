@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "urania-v2", "runtimeExecutable": "php", "runtimeArgs": ["-S", "localhost:8006", "-t", "/Users/nargizalhasova/Desktop/projectsweb/Urania-v2", "/Users/nargizalhasova/Desktop/projectsweb/Urania-v2/router.php"], "port": 8006 }
+  ]
+}
