@@ -4,7 +4,11 @@
  * Fișierul bazei stă în /data (acces web blocat prin .htaccess).
  */
 
-const URANIA_DATA_DIR   = __DIR__ . '/../data';
+// Pe server baza stă ÎN AFARA public_html (../data/db), ca să nu poată fi descărcată
+// indiferent de configurarea serverului web. Local (fără acel folder) rămâne în /data.
+define('URANIA_DATA_DIR', is_dir(dirname(__DIR__, 2) . '/data/db')
+    ? dirname(__DIR__, 2) . '/data/db'
+    : __DIR__ . '/../data');
 const URANIA_UPLOAD_DIR = __DIR__ . '/../uploads/events';
 const URANIA_UPLOAD_URL = 'uploads/events';
 
