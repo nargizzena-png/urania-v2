@@ -99,13 +99,19 @@ _Actualizat: 10 noiembrie 2026 (v2). Lucrul se face în `Urania-v2`, branch `red
 - [ ] Pagina Contact — aliniată la noul stil
 
 ## 7. Înainte de lansare
-- [ ] Creezi primul cont în `/admin`
 - [ ] Commit în git (branch `redesign-2026`)
 - [ ] Noul hosting: PHP 8 cu SQLite și GD/WebP, Apache (pentru `.htaccess`)
 - [ ] Trimiterea emailurilor din formular: testată pe server; recomandat SMTP (Gmail / Brevo) în loc de `mail()`
 - [ ] Backup regulat pentru `data/` și `uploads/events/`
 - [ ] Ștergerea paginilor vechi nefolosite (`servicii.php`, imaginile `images/servicii/`) și a `router.php` (doar pentru local)
 - [ ] Test final pe telefon și calculator
+
+## Backlog — Admin (amânat, nu lucrăm acum)
+_Admin-ul este dezactivat pe server din 17.11.2026: folderul a fost mutat în afara site-ului, în `/srv/sites/uraniastudio/uraniastudio/admin-disabled`. Evenimentele din Jurnal rămân vizibile._
+- [ ] La publicare: **nu urca folderul `admin/`** pe server până nu reactivăm admin-ul
+- [ ] Reactivare: mutăm folderul înapoi în `public_html/admin` și creăm imediat primul cont în `/admin/setup.php` (până atunci oricine ar putea crea contul)
+- [ ] Până atunci, evenimente noi în Jurnal se adaugă doar manual, de către developer
+- [ ] Protecție suplimentară pentru `/admin` (acces limitat, parolă puternică, 2FA) — de decis la reactivare
 
 ---
 
