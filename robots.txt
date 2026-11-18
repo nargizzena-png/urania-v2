@@ -4,4 +4,23 @@ Disallow: /data/
 Disallow: /includes/
 Disallow: /contact-submit.php
 
+# Crawlere AI — acces permis
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /data/
+Disallow: /includes/
+Disallow: /contact-submit.php
+
 Sitemap: https://uraniastudio.eu/sitemap.php

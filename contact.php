@@ -4,28 +4,6 @@ $page_desc = 'Contactează Urania Studio la +40 756 861 229 sau pe WhatsApp. Str
 include 'includes/header.php'; 
 ?>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Urania Studio",
-  "description": "Hub Cultural & Studio de Producție în Cluj-Napoca",
-  "url": "https://<?php echo $_SERVER['HTTP_HOST'] ?? 'uraniasstudio.ro'; ?>",
-  "telephone": "+40756861229",
-  "email": "uraniastudio.eu@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Strada Horea, nr. 4",
-    "addressLocality": "Cluj-Napoca",
-    "addressCountry": "RO"
-  },
-  "openingHours": "Mo-Su 00:00-24:00",
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61586391453182"
-  ]
-}
-</script>
-
 <section class="section" id="contact-main">
     <div class="container">
         <div class="contact-wrap">

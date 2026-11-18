@@ -42,6 +42,23 @@
     <?php if (isset($preload_image)): ?>
     <link rel="preload" as="image" href="<?php echo htmlspecialchars($preload_image); ?>" type="image/webp">
     <?php endif; ?>
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Urania Studio",
+      "description": "Hub cultural și studio de producție în Cluj-Napoca: sală de spectacole (blackbox), studio de sunet și sală de repetiții de închiriat pentru repetiții, concerte, spectacole, conferințe, workshop-uri, podcast-uri, foto și video.",
+      "url": "<?php echo htmlspecialchars(SITE_URL); ?>/",
+      "logo": "<?php echo htmlspecialchars(SITE_URL); ?>/icon-512.png",
+      "image": "<?php echo htmlspecialchars(SITE_URL); ?>/images/og-urania.jpg",
+      "telephone": "+40756861229",
+      "email": "uraniastudio.eu@gmail.com",
+      "address": {"@type": "PostalAddress", "streetAddress": "Strada Horea, nr. 4", "addressLocality": "Cluj-Napoca", "addressCountry": "RO"},
+      "openingHours": "Mo-Su 00:00-24:00",
+      "sameAs": ["https://www.facebook.com/profile.php?id=61586391453182"]
+    }
+    </script>
 </head>
 <body>
 

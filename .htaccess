@@ -10,3 +10,11 @@ RewriteRule ^sitemap\.xml$ /sitemap.php [L]
 <FilesMatch "\.(md|sqlite|zip)$">
     Require all denied
 </FilesMatch>
+
+# llms.txt — servit ca text simplu
+<Files "llms.txt">
+    ForceType "text/plain; charset=utf-8"
+</Files>
+
+# Fișiere pentru agenți AI care nu există — 404 real, nu pagina HTML implicită
+RewriteRule ^(\.well-known/)?ai-catalog\.json$ - [R=404,L]

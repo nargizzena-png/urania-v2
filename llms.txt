@@ -1,0 +1,20 @@
+# Urania Studio
+
+> Urania Studio is a cultural hub and production studio in Cluj-Napoca, Romania (Strada Horea nr. 4). It rents a stage hall / blackbox, a sound studio and a rehearsal room for rehearsals, concerts, shows, conferences, workshops, podcasts, photo and video production.
+
+Site language: Romanian. Contact: uraniastudio.eu@gmail.com, +40 756 861 229.
+
+## Pages
+
+- [Home](https://uraniastudio.eu/): overview of the venue, upcoming events and prices
+- [Spații (Spaces)](https://uraniastudio.eu/spatii.php): the three rooms — main stage hall (blackbox), sound studio, rehearsal room
+- [Prețuri (Prices)](https://uraniastudio.eu/preturi.php): rates for rehearsals, podcast/photo/video, conferences and workshops, shows and concerts; custom quote form
+- [Jurnal (Events)](https://uraniastudio.eu/jurnal.php): past and upcoming events at Urania
+- [Contact](https://uraniastudio.eu/contact.php): booking requests, address and contact details
+
+## Optional
+
+- [Termeni și condiții](https://uraniastudio.eu/termeni.php): terms and conditions
+- [Politica de confidențialitate](https://uraniastudio.eu/privacy.php): privacy policy
+- [Cookies](https://uraniastudio.eu/cookies.php): cookie policy
+- [Sitemap](https://uraniastudio.eu/sitemap.xml)
