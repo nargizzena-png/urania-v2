@@ -30,10 +30,10 @@
     <meta property="og:site_name" content="Urania Studio">
     
     <title><?php echo isset($page_title) ? htmlspecialchars($page_title) . ' | Urania Studio' : 'Urania Studio'; ?></title>
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=2">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
