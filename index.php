@@ -18,10 +18,9 @@ include 'includes/header.php';
     <div class="cine-hud tl"><small>Now playing</small><span id="cine-tc">00:00:00:00</span></div>
     <div class="cine-hud tr"><small>Format</small><span>2.39 : 1</span></div>
     <div class="cine-hud bl"><small>Location</small><span>Cluj-Napoca, RO</span></div>
-    <div class="cine-hud br"><span>MCMX</span></div>
+    <div class="cine-hud br"><small>Scene</small><span>01 · Take 01</span></div>
 
     <div class="cine-center">
-        <p class="cine-kicker">Cluj-Napoca · Est. 1910</p>
         <span class="cine-rule"></span>
         <h1 class="cine-title" aria-label="Urania Studio">
             <span class="cine-letters" aria-hidden="true"><?php foreach (str_split('URANIA') as $i => $ch): ?><span style="--i:<?= $i ?>"><?= $ch ?></span><?php endforeach; ?></span>

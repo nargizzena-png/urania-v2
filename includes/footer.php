@@ -5,6 +5,7 @@
             <a href="index.php" class="footer-wordmark gold-text">URANIA</a>
             <span class="footer-logo">Partenerul imaginației tale</span>
             <p>Sală de spectacol, scenă și studio de sunet în Cluj-Napoca.</p>
+            <p>Urania Studio — spațiu independent pentru evenimente și producție, în clădirea istorică Palatul Urania (1910), str. Horea 4, Cluj-Napoca.</p>
         </div>
 
         <nav class="footer-col" aria-label="Navigare subsol">
