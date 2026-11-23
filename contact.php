@@ -65,6 +65,9 @@ include 'includes/header.php';
                             <a href="https://www.facebook.com/profile.php?id=61586391453182" target="_blank" rel="noopener noreferrer" aria-label="Urmărește-ne pe Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
+                            <a href="https://www.instagram.com/studiourania/" target="_blank" rel="noopener noreferrer" aria-label="Urmărește-ne pe Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -44,7 +44,7 @@ include 'includes/header.php';
         <ul>
             <li><strong>Harta Google</strong> din pagina de contact se încarcă doar când apeși „Afișează harta”. Atunci Google poate seta propriile cookie-uri.</li>
             <li><strong>Fonturile</strong> site-ului sunt încărcate de pe serverele Google Fonts, care primesc adresa IP a browserului tău. Nu se setează cookie-uri.</li>
-            <li>Linkurile către <strong>Facebook</strong> și <strong>WhatsApp</strong> sunt simple linkuri; cookie-urile acestor servicii apar doar după ce le deschizi.</li>
+            <li>Linkurile către <strong>Facebook</strong>, <strong>Instagram</strong> și <strong>WhatsApp</strong> sunt simple linkuri; cookie-urile acestor servicii apar doar după ce le deschizi.</li>
         </ul>
 
         <h2>Cum îți schimbi alegerea</h2>

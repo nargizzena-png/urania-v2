@@ -89,7 +89,7 @@ _Actualizat: 10 noiembrie 2026 (v2). Lucrul se face în `Urania-v2`, branch `red
 - [ ] Unde păstrăm lista celor care au bifat marketing (ex. Brevo / Mailchimp) + link de dezabonare în fiecare email
 
 ## 6. Design — de terminat
-- [ ] Link Instagram (`studiourania`) în subsol și în datele structurate
+- [x] Link Instagram (`studiourania`) în subsol și în datele structurate
 - [ ] Butonul „Cere ofertă” în meniu
 - [ ] Un singur formular comun (Contact + Prețuri)
 - [ ] Spații: titlu de pagină vizibil, carduri mai compacte, capacitate și preț „de la”

@@ -56,7 +56,7 @@
       "email": "uraniastudio.eu@gmail.com",
       "address": {"@type": "PostalAddress", "streetAddress": "Strada Horea, nr. 4", "addressLocality": "Cluj-Napoca", "addressCountry": "RO"},
       "openingHours": "Mo-Su 00:00-24:00",
-      "sameAs": ["https://www.facebook.com/profile.php?id=61586391453182"]
+      "sameAs": ["https://www.facebook.com/profile.php?id=61586391453182", "https://www.instagram.com/studiourania/"]
     }
     </script>
 </head>

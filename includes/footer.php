@@ -24,6 +24,7 @@
                 <li><a href="tel:+40756861229">+40 756 861 229</a></li>
                 <li><a href="mailto:uraniastudio.eu@gmail.com">uraniastudio.eu@gmail.com</a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=61586391453182" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" aria-hidden="true"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/studiourania/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
             </ul>
         </div>
 
