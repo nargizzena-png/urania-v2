@@ -73,7 +73,7 @@ include 'includes/header.php';
         </div>
         <div class="home-spaces">
             <a href="spatii.php#blackbox" class="hs-card reveal">
-                <img src="images/spatii/blackbox-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
+                <img src="images/spatii/blackbox-400.webp" alt="Sala Mare cu scenă (Blackbox) — Urania Studio, Cluj" width="400" height="400" loading="lazy" decoding="async">
                 <div>
                     <span class="card-sub">Sala Mare cu scenă</span>
                     <h3>Blackbox</h3>
@@ -81,7 +81,7 @@ include 'includes/header.php';
                 </div>
             </a>
             <a href="spatii.php#podcast" class="hs-card reveal reveal-delay-1">
-                <img src="images/spatii/podcast-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
+                <img src="images/spatii/podcast-400.webp" alt="Studio de sunet pentru podcast — Urania Studio, Cluj" width="400" height="400" loading="lazy" decoding="async">
                 <div>
                     <span class="card-sub">Înregistrare audio</span>
                     <h3>Studio de sunet</h3>
@@ -89,7 +89,7 @@ include 'includes/header.php';
                 </div>
             </a>
             <a href="spatii.php#repetitii" class="hs-card reveal reveal-delay-2">
-                <img src="images/spatii/repetitii-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
+                <img src="images/spatii/repetitii-400.webp" alt="Sala de repetiții cu instrumente — Urania Studio, Cluj" width="400" height="400" loading="lazy" decoding="async">
                 <div>
                     <span class="card-sub">Studio de înregistrări</span>
                     <h3>Repetiții</h3>
@@ -116,7 +116,7 @@ include 'includes/header.php';
                 <?php if ($upcoming): $f = $upcoming[0]; $fUrl = 'eveniment.php?e=' . rawurlencode($f['slug']); $ft = strtotime($f['starts_at']); ?>
                 <article class="hf reveal">
                     <a href="<?= e($fUrl) ?>" class="hf-poster" tabindex="-1" aria-hidden="true">
-                        <?php if ($f['cover']): ?><img src="<?= e(photo_url($f['cover'])) ?>" alt="" loading="lazy" decoding="async"><?php endif; ?>
+                        <?php if ($f['cover']): ?><img src="<?= e(photo_url($f['cover'])) ?>" alt="Afiș: <?= e($f['title']) ?> — Urania Studio, Cluj" loading="lazy" decoding="async"><?php endif; ?>
                     </a>
                     <div class="hf-info">
                         <p class="hf-date"><strong><?= e(event_day_label($f)) ?></strong><span><?= ro_month((int)date('n', $ft)) ?><br><?= e(date('H:i', $ft)) ?></span></p>
@@ -134,7 +134,7 @@ include 'includes/header.php';
                     <?php foreach (array_slice($upcoming, 1) as $i => $ev): $t = strtotime($ev['starts_at']); ?>
                     <a href="eveniment.php?e=<?= e(rawurlencode($ev['slug'])) ?>" class="he-item reveal<?= $i ? ' reveal-delay-' . $i : '' ?>">
                         <span class="he-date"><strong><?= e(event_day_label($ev)) ?></strong><?= ro_month((int)date('n', $t), true) ?></span>
-                        <?php if ($ev['cover']): ?><span class="he-thumb"><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="" loading="lazy" decoding="async"></span><?php endif; ?>
+                        <?php if ($ev['cover']): ?><span class="he-thumb"><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="Afiș: <?= e($ev['title']) ?> — Urania Studio, Cluj" loading="lazy" decoding="async"></span><?php endif; ?>
                         <span class="he-info">
                             <span class="card-sub"><?= e(implode(' · ', array_filter([$ev['category'], $ev['venue']]))) ?></span>
                             <span class="he-title"><?= e($ev['title']) ?></span>
@@ -157,7 +157,7 @@ include 'includes/header.php';
                 <div class="home-archive">
                     <?php foreach ($recent as $i => $ev): ?>
                     <a href="eveniment.php?e=<?= e(rawurlencode($ev['slug'])) ?>" class="ha-item reveal<?= $i ? ' reveal-delay-' . min($i, 3) : '' ?>">
-                        <?php if ($ev['cover']): ?><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="" loading="lazy" decoding="async"><?php endif; ?>
+                        <?php if ($ev['cover']): ?><img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="Afiș: <?= e($ev['title']) ?> — Urania Studio, Cluj" loading="lazy" decoding="async"><?php endif; ?>
                         <span class="ha-cap"><small><?= e(event_day_label($ev) . ' ' . ro_month((int)date('n', strtotime($ev['starts_at'])), true)) ?></small><?= e($ev['title']) ?></span>
                     </a>
                     <?php endforeach; ?>

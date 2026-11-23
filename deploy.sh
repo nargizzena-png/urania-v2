@@ -22,6 +22,17 @@ for f in "${FILES[@]}"; do
   [ -f "$f" ] || { echo "Nu există local: $f"; exit 1; }
 done
 
+# 0. Fiecare <img> trebuie să aibă alt. Fără alt = oprire; alt="" = doar avertisment
+#    (permis pentru imagini decorative).
+ALT_FAIL=0
+for f in "${FILES[@]}"; do
+  case "$f" in *.php|*.html) ;; *) continue ;; esac
+  out=$(perl -0777 -ne 'while (/<img\b((?:<\?.*?\?>|[^>])*)>/gs) { my $t=$1; my $l=1+(substr($_,0,$-[0])=~tr/\n//); if ($t !~ /\balt\s*=/) { print "  FĂRĂ ALT  $ARGV:$l\n" } elsif ($t =~ /\balt\s*=\s*""/) { print "  alt gol   $ARGV:$l (ok doar dacă e decorativă)\n" } }' "$f")
+  [ -n "$out" ] && echo "$out"
+  echo "$out" | grep -q "FĂRĂ ALT" && ALT_FAIL=1
+done
+[ $ALT_FAIL = 1 ] && { echo "Oprit: imagini fără alt. Adaugă alt (sau alt=\"\" dacă e decorativă)."; exit 1; }
+
 # 1. Verificare: fișierul de pe server trebuie să fie versiunea anterioară din git
 #    (sau deja cea nouă). Altfel cineva l-a modificat direct pe server.
 echo "== Verificare server"

@@ -22,7 +22,7 @@ function event_card(array $ev, bool $past): void
     <article class="ev-card reveal<?= $past ? ' ev-past' : '' ?>">
         <a href="<?= e($url) ?>" class="ev-media" tabindex="-1" aria-hidden="true">
             <?php if ($ev['cover']): ?>
-                <img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="" loading="lazy" decoding="async">
+                <img src="<?= e(photo_url($ev['cover'], true)) ?>" alt="Afiș: <?= e($ev['title']) ?> — Urania Studio, Cluj" loading="lazy" decoding="async">
             <?php else: ?>
                 <span class="ev-noimg">URANIA</span>
             <?php endif; ?>

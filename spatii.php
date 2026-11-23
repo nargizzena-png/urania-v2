@@ -20,7 +20,7 @@ include 'includes/header.php';
                                  images/spatii/blackbox-600.webp 600w,
                                  images/spatii/blackbox.webp 640w"
                          sizes="(max-width: 640px) 90vw, 400px"
-                         alt=""
+                         alt="Sala Mare cu scenă (Blackbox) — Urania Studio, Cluj"
                          width="640"
                          height="640"
                          decoding="async"
@@ -40,7 +40,7 @@ include 'includes/header.php';
                                  images/spatii/podcast-600.webp 600w,
                                  images/spatii/podcast.webp 640w"
                          sizes="(max-width: 640px) 90vw, 400px"
-                         alt=""
+                         alt="Studio de sunet pentru podcast — Urania Studio, Cluj"
                          width="640"
                          height="640"
                          loading="lazy"
@@ -60,7 +60,7 @@ include 'includes/header.php';
                                  images/spatii/repetitii-600.webp 600w,
                                  images/spatii/repetitii.webp 640w"
                          sizes="(max-width: 640px) 90vw, 400px"
-                         alt=""
+                         alt="Sala de repetiții cu instrumente — Urania Studio, Cluj"
                          width="640"
                          height="640"
                          loading="lazy"
@@ -78,10 +78,10 @@ include 'includes/header.php';
     <!-- Fotografii Sala Mare -->
     <section class="space-photos" aria-label="Fotografii Sala Mare">
         <a href="images/spatii/sala-mare-lumini.webp" class="sp-photo sp-photo-main" data-lightbox>
-            <img src="images/spatii/sala-mare-lumini-800.webp" srcset="images/spatii/sala-mare-lumini-800.webp 800w, images/spatii/sala-mare-lumini.webp 1800w" sizes="(max-width: 900px) 100vw, 66vw" alt="Sala Mare cu scena luminată în roșu și albastru" width="1800" height="1200" loading="lazy" decoding="async">
+            <img src="images/spatii/sala-mare-lumini-800.webp" srcset="images/spatii/sala-mare-lumini-800.webp 800w, images/spatii/sala-mare-lumini.webp 1800w" sizes="(max-width: 900px) 100vw, 66vw" alt="Sala Mare cu scena luminată în roșu și albastru — Urania Studio, Cluj" width="1800" height="1200" loading="lazy" decoding="async">
         </a>
         <a href="images/spatii/sala-mare-albastru.webp" class="sp-photo" data-lightbox>
-            <img src="images/spatii/sala-mare-albastru-800.webp" srcset="images/spatii/sala-mare-albastru-800.webp 800w, images/spatii/sala-mare-albastru.webp 1800w" sizes="(max-width: 900px) 100vw, 33vw" alt="Sala Mare goală, cu glob disco și panouri acustice" width="1800" height="1200" loading="lazy" decoding="async">
+            <img src="images/spatii/sala-mare-albastru-800.webp" srcset="images/spatii/sala-mare-albastru-800.webp 800w, images/spatii/sala-mare-albastru.webp 1800w" sizes="(max-width: 900px) 100vw, 33vw" alt="Sala Mare goală, cu glob disco și panouri acustice — Urania Studio, Cluj" width="1800" height="1200" loading="lazy" decoding="async">
         </a>
     </section>
 
@@ -115,7 +115,7 @@ include 'includes/header.php';
         <div class="fisa-media">
             <span class="cine-corner tl"></span><span class="cine-corner tr"></span>
             <span class="cine-corner bl"></span><span class="cine-corner br"></span>
-            <img src="images/spatii/podcast.webp" alt="Studio de sunet pentru podcast" width="640" height="640" loading="lazy" decoding="async" class="fisa-img">
+            <img src="images/spatii/podcast.webp" alt="Studio de sunet pentru podcast, cu microfoane și lumini — Urania Studio, Cluj" width="640" height="640" loading="lazy" decoding="async" class="fisa-img">
         </div>
         <div class="fisa-info">
             <small class="fisa-kicker">Fișa tehnică</small>
@@ -136,7 +136,7 @@ include 'includes/header.php';
         <div class="fisa-media">
             <span class="cine-corner tl"></span><span class="cine-corner tr"></span>
             <span class="cine-corner bl"></span><span class="cine-corner br"></span>
-            <img src="images/spatii/repetitii.webp" alt="Sala de repetiții" width="640" height="640" loading="lazy" decoding="async" class="fisa-img">
+            <img src="images/spatii/repetitii.webp" alt="Sala de repetiții, studio de înregistrări la subsol — Urania Studio, Cluj" width="640" height="640" loading="lazy" decoding="async" class="fisa-img">
         </div>
         <div class="fisa-info">
             <small class="fisa-kicker">Fișa tehnică</small>

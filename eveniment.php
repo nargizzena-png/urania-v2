@@ -49,7 +49,7 @@ if ($ev['ticket_url'] && !is_facebook_link($ev['ticket_url'])) $jsonLd['offers']
         <div class="evd-head">
             <?php if ($ev['cover']): ?>
             <figure class="evd-cover">
-                <img src="<?= e(photo_url($ev['cover'])) ?>" alt="Afiș: <?= e($ev['title']) ?>">
+                <img src="<?= e(photo_url($ev['cover'])) ?>" alt="Afiș: <?= e($ev['title']) ?> — Urania Studio, Cluj">
             </figure>
             <?php endif; ?>
             <div class="evd-info">
@@ -85,7 +85,7 @@ if ($ev['ticket_url'] && !is_facebook_link($ev['ticket_url'])) $jsonLd['offers']
             <div class="gallery-grid">
                 <?php foreach ($photos as $i => $p): ?>
                 <a href="<?= e(photo_url($p['file'])) ?>" class="gallery-item" data-lightbox data-index="<?= $i ?>">
-                    <img src="<?= e(photo_url($p['file'], true)) ?>" alt="<?= e($ev['title']) ?> — foto <?= $i + 1 ?>" loading="lazy" decoding="async">
+                    <img src="<?= e(photo_url($p['file'], true)) ?>" alt="<?= e($ev['title']) ?> — foto <?= $i + 1 ?>, Urania Studio, Cluj" loading="lazy" decoding="async">
                 </a>
                 <?php endforeach; ?>
             </div>
