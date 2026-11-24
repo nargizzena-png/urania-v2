@@ -97,8 +97,8 @@ include 'includes/header.php';
                             <select id="subject" name="subject" required aria-required="true">
                                 <option value="" disabled selected>Selectează un subiect</option>
                                 <option value="eveniment">Organizare eveniment</option>
-                                <option value="repetitii">Închiriere sală repetiții</option>
-                                <option value="podcast">Închiriere studio podcast</option>
+                                <option value="repetitii">Sesiuni de repetiții pe scenă</option>
+                                <option value="podcast">Sesiuni de înregistrare podcast</option>
                                 <option value="productie">Producție foto/video</option>
                                 <option value="colaborare">Propunere de colaborare</option>
                                 <option value="altele">Altele</option>

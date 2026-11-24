@@ -75,7 +75,7 @@ include 'includes/header.php';
         <p>Pentru evenimente se percepe o garanție pentru integritatea spațiului și a echipamentelor, stabilită în ofertă. Starea sălii se consemnează într-un proces-verbal de predare-primire, cu fotografii, înainte și după eveniment. Garanția se returnează în cel mult <strong>7 zile lucrătoare</strong> după eveniment, mai puțin eventualele daune constatate în procesul-verbal.</p>
 
         <h2 id="regulament">6. Regulament intern</h2>
-        <p>Pentru siguranța tuturor și păstrarea spațiului, pe durata închirierii se respectă următoarele reguli:</p>
+        <p>Pentru siguranța tuturor și păstrarea spațiului, pe durata sesiunii sau a evenimentului se respectă următoarele reguli:</p>
         <ul>
             <li><strong>Program:</strong> activitatea în sală se încheie cel târziu la ora <strong>22:00</strong>, cu respectarea liniștii vecinilor.</li>
             <li><strong>Fumatul</strong> (inclusiv țigări electronice) este interzis în tot spațiul.</li>

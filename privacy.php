@@ -77,7 +77,7 @@ include 'includes/header.php';
         </ul>
 
         <h2 id="destinatari">5. Cui transmitem datele</h2>
-        <p>Nu vindem și nu închiriem datele tale. Ele pot ajunge doar la furnizori care ne ajută să funcționăm, legați prin contract de obligații de confidențialitate:</p>
+        <p>Nu vindem și nu cedăm datele tale. Ele pot ajunge doar la furnizori care ne ajută să funcționăm, legați prin contract de obligații de confidențialitate:</p>
         <ul>
             <li>furnizorul de găzduire a site-ului;</li>
             <li>Google (serviciul de email Gmail; Google Analytics, doar cu acordul tău);</li>

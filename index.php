@@ -3,7 +3,7 @@ require_once 'includes/db.php';
 $upcoming = upcoming_events(3);
 $next = $upcoming[0] ?? null;
 $recent = past_events(3);
-$page_desc = 'Urania Studio, Cluj-Napoca: sală de spectacol cu scenă, studio de sunet și sală de repetiții. Închiriere pentru concerte, teatru, conferințe, podcast și producție video.';
+$page_desc = 'Urania Studio, Cluj-Napoca: găzduim evenimente, sesiuni de lucru, workshopuri, concerte și podcasturi la Urania Studio. Sală cu scenă, 100 de locuri.';
 include 'includes/header.php';
 ?>
 

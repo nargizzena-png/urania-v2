@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php echo isset($page_desc) ? htmlspecialchars($page_desc) : 'Urania Studio - Hub Cultural & Studio de Producție în Cluj-Napoca. Locații pentru evenimente, repetiții, podcast-uri și producții creative.'; ?>">
-    <meta name="keywords" content="studio producție Cluj, hub cultural, spații evenimente, repetiții, podcast, închiriere sală">
+    <meta name="keywords" content="studio producție Cluj, hub cultural, spații evenimente, repetiții, podcast, găzduim evenimente">
     <meta name="author" content="Urania Studio">
     <meta name="robots" content="index, follow">
 <?php
@@ -46,17 +46,19 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "EventVenue"],
       "name": "Urania Studio",
-      "description": "Hub cultural și studio de producție în Cluj-Napoca: sală de spectacole (blackbox), studio de sunet și sală de repetiții de închiriat pentru repetiții, concerte, spectacole, conferințe, workshop-uri, podcast-uri, foto și video.",
+      "description": "Hub cultural și studio de producție în centrul Clujului. Găzduim evenimente, sesiuni de lucru, workshopuri, lansări, conferințe, concerte, repetiții și sesiuni de înregistrare podcast, foto și video.",
       "url": "<?php echo htmlspecialchars(SITE_URL); ?>/",
       "logo": "<?php echo htmlspecialchars(SITE_URL); ?>/icon-512.png",
       "image": "<?php echo htmlspecialchars(SITE_URL); ?>/images/og-urania.jpg",
       "telephone": "+40756861229",
       "email": "uraniastudio.eu@gmail.com",
       "address": {"@type": "PostalAddress", "streetAddress": "Strada Horea, nr. 4", "addressLocality": "Cluj-Napoca", "addressCountry": "RO"},
-      "openingHours": "Mo-Su 00:00-24:00",
-      "sameAs": ["https://www.facebook.com/profile.php?id=61586391453182", "https://www.instagram.com/studiourania/"]
+      "containedInPlace": {"@type": "LandmarksOrHistoricalBuildings", "name": "Palatul Urania"},
+      "maximumAttendeeCapacity": 100,
+      "priceRange": "de la 120 RON",
+      "sameAs": ["https://www.instagram.com/studiourania/", "https://www.facebook.com/profile.php?id=61586391453182"]
     }
     </script>
 </head>

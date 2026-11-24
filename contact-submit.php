@@ -153,7 +153,7 @@ if (!empty($errors)) {
 // Prepare subject mapping
 $subjects = [
     'eveniment' => 'Organizare eveniment',
-    'repetitii' => 'Închiriere sală repetiții',
+    'repetitii' => 'Sesiuni de repetiții pe scenă',
     'podcast' => 'Podcast, foto sau video',
     'conferinta' => 'Conferință sau workshop',
     'spectacol' => 'Spectacol sau concert',
